@@ -416,7 +416,7 @@ MonoBehaviour:
   StartTower: {fileID: 2088186563}
   MiddleTower: {fileID: 459217513}
   FinishTower: {fileID: 1092490911}
-  ChooseCoundDiskPanel: {fileID: 1892449911}
+  ChooseCountDiskPanel: {fileID: 1362594163}
   FinishPanel: {fileID: 819701130}
   CountDiskField: {fileID: 1135359008}
 --- !u!4 &65560433
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 1362594164}
   - component: {fileID: 1362594165}
   m_Layer: 5
-  m_Name: ChooseCoundDiskPanel
+  m_Name: ChooseCountDiskPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
