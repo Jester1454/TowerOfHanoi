@@ -5,24 +5,24 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
-{
-	private int diskCount;
-	private bool resolveFinished = false;
-	private List<Disk> listDisks = new List<Disk>();
-	
+{	
 	public int MaxDiskCount;
 	
 	public Disk DiskPrefab;
 	public Tower StartTower;
 	public Tower MiddleTower;
 	public Tower FinishTower;
-	public GameObject ChooseCoundDiskPanel;
+	public GameObject ChooseCountDiskPanel;
 	public GameObject FinishPanel;
 	public InputField CountDiskField;
 	
+	private int diskCount;
+	private bool resolveFinished = false;
+	private List<Disk> listDisks = new List<Disk>();
+	
 	private void Awake()
 	{
-		ChooseCoundDiskPanel.SetActive(!resolveFinished);
+		ChooseCountDiskPanel.SetActive(!resolveFinished);
 		FinishPanel.SetActive(resolveFinished);		
 	}
 
@@ -57,7 +57,7 @@ public class GameController : MonoBehaviour
 
 		if (diskCount <= MaxDiskCount)
 		{
-			ChooseCoundDiskPanel.SetActive(resolveFinished);
+			ChooseCountDiskPanel.SetActive(resolveFinished);
 			InitTowers();
 			CreateStartedDisk();
 			StartCoroutine(StartResolveCoroutine());
@@ -96,6 +96,6 @@ public class GameController : MonoBehaviour
 		resolveFinished = false;
 		
 		FinishPanel.SetActive(resolveFinished);
-		ChooseCoundDiskPanel.SetActive(!resolveFinished);
+		ChooseCountDiskPanel.SetActive(!resolveFinished);
 	}
 }
