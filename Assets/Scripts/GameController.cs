@@ -23,9 +23,7 @@ public class GameController : MonoBehaviour
 	private void Awake()
 	{
 		ChooseCoundDiskPanel.SetActive(!resolveFinished);
-		FinishPanel.SetActive(resolveFinished);
-		
-		InitTowers();
+		FinishPanel.SetActive(resolveFinished);		
 	}
 
 	private void InitTowers()
@@ -60,6 +58,7 @@ public class GameController : MonoBehaviour
 		if (diskCount <= MaxDiskCount)
 		{
 			ChooseCoundDiskPanel.SetActive(resolveFinished);
+			InitTowers();
 			CreateStartedDisk();
 			StartCoroutine(StartResolveCoroutine());
 		}

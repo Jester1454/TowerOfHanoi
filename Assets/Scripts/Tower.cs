@@ -24,6 +24,8 @@ public class Tower : MonoBehaviour
         BottomPosition = new Vector3(mTransform.position.x, bounds.center.y + bounds.min.y, mTransform.position.z);
         TopPosition = new Vector3(mTransform.position.x, bounds.center.y + bounds.max.y, mTransform.position.z);
         
+        Clear();
+        
         stack = new Stack<Disk>(heightTower);
     }
 
@@ -45,5 +47,11 @@ public class Tower : MonoBehaviour
     public Disk RemoveDisk()
     {
        return stack.Pop();
+    }
+
+    public void Clear()
+    {
+        if(stack!=null)
+            stack.Clear();
     }
 }
